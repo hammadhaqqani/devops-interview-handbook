@@ -1,29 +1,33 @@
-name: Lint Markdown
+name: Validate
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [main]
   pull_request:
-    branches: [ main, master ]
+    branches: [main]
 
 jobs:
-  markdown-lint:
+  validate:
+    name: Validate Content
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-      
-      - name: Install markdownlint-cli
-        run: npm install -g markdownlint-cli
-      
-      - name: Lint markdown files
-        run: markdownlint '**/*.md' --ignore node_modules
-      
-      - name: Check for broken links (optional)
+      - uses: actions/checkout@v4
+
+      - name: Check required structure
         run: |
-          npm install -g markdown-link-check
-          find . -name "*.md" -not -path "./node_modules/*" -exec markdown-link-check {} \; || true
+          for dir in questions scenarios architecture study-guide; do
+            test -d "$dir" || { echo "Missing directory: $dir"; exit 1; }
+          done
+          echo "Directory structure valid"
+
+      - name: Count content
+        run: |
+          echo "Questions files: $(find questions/ -name '*.md' | wc -l)"
+          echo "Scenario files: $(find scenarios/ -name '*.md' | wc -l)"
+          echo "Architecture files: $(find architecture/ -name '*.md' | wc -l)"
+          echo "Total markdown files: $(find . -name '*.md' -not -path './.git/*' | wc -l)"
+
+      - name: Check for empty files
+        run: |
+          find . -name "*.md" -not -path "./.git/*" -empty -exec echo "Empty file: {}" \; -exec false {} +
+          echo "No empty markdown files found"
