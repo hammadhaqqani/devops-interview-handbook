@@ -160,3 +160,10 @@ If this handbook helped you land your dream job, please ⭐ star this repository
 **Good luck with your interviews!** 🚀
 
 *Remember: The goal isn't to memorize answers, but to understand concepts deeply and communicate them clearly.*
+---
+
+## Support
+
+If you find this useful, consider buying me a coffee!
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/hammadhaqqani)
