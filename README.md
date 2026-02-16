@@ -1,5 +1,7 @@
 # DevOps Interview Handbook
 
+[![Markdown Lint](https://github.com/hammadhaqqani/devops-interview-handbook/actions/workflows/lint-markdown.yml/badge.svg)](https://github.com/hammadhaqqani/devops-interview-handbook/actions/workflows/lint-markdown.yml)
+[![GitHub Pages](https://github.com/hammadhaqqani/devops-interview-handbook/actions/workflows/pages.yml/badge.svg)](https://hammadhaqqani.github.io/devops-interview-handbook/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
