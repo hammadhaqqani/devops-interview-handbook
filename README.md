@@ -160,6 +160,12 @@ If this handbook helped you land your dream job, please ⭐ star this repository
 **Good luck with your interviews!** 🚀
 
 *Remember: The goal isn't to memorize answers, but to understand concepts deeply and communicate them clearly.*
+
+## See Also
+
+- [Awesome DevOps AI](https://github.com/hammadhaqqani/awesome-devops-ai) - Curated list of 100+ AI tools for DevOps, SRE, and Platform Engineering
+- [Free AI & DevOps Tools](https://hammadhaqqani.com/tools) - 41 free browser-based AI and DevOps tools
+
 ---
 
 ## Support
